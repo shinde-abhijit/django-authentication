@@ -1,0 +1,14 @@
+{% extends 'authenticate/base.html' %}
+{% block title %} - Homepage{% endblock title %}
+{% block content %}
+
+<div class="container col-xl-4 col-lg-6 col-md-7 col-12 mt-3 form-container">
+    <div class="container form-title-container">
+        <h3 class="text-center">Homepage</h3>
+        <p>User Logged in - {{ user.username }}</p>
+    </div>
+    <div class="form-bottom-container text-center">
+        <button class="btn btn-warning"><a href="{% url 'logout-user' %}">Logout</a></button>
+    </div>
+</div>
+{% endblock content %}

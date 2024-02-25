@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+<title>Authentication{% block title%}{% endblock %}</title>
+</head>
+<body>
+
+<main>
+{% block content %}
+{% endblock %}
+</main>
+<footer>
+    <p class="text-center">Authentication using Python Django.</p>
+</footer>
+
+
+
+<style>
+body{
+    background-color: #e5e5e5;
+}
+
+form{
+    background-color: white;
+}
+.bg-purple{
+    background-color: purple;
+}
+
+
+body h3, h5{
+    font-family: 'Poppins';
+}
+
+body label{
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 500;
+    text-indent: 10px;
+}
+
+.form-container{
+    min-width: 400px;
+}
+
+
+.form-title-container{
+    background-color: purple;
+    width: auto;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.form-title-container h3, h5{
+    color: white;
+}
+.form-bottom-container{
+    background-color: purple;
+    width: auto;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.form-bottom-container h3{
+    color: white;
+}
+
+.button-submit{
+    border-radius: 10px;
+}
+.error-style{
+    color: red;
+    font-weight: 600;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'authenticate/base.html' %}
+{% block title %} - Login User{% endblock title %}
+{% block content %}
+
+<div class="container col-xl-4 col-lg-6 col-md-7 col-12 mt-3 form-container">
+    <div class="container form-title-container">
+        <h3 class="text-center">Login Page</h3>
+    </div>
+    <form action="" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="text-center error-style">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col-12 px-5">
+                <label for="" class="col-12 mb-1">Username</label>
+                <input class="form-control mb-2" type="text" name="uname" placeholder="Enter Your Username" required />
+            </div>
+            <div class="col-12 px-5">
+                <label for="" class="col-12 mb-1">Password</label>
+                <input class="form-control mb-2" type="password" name="passw" placeholder="Enter Your Password" required />
+            </div>
+        </div>
+        <div class="form-bottom-container text-center">
+            <button type="submit" class="text-center btn"><h5 class="text-center button-submit">Login</h5></button>
+        </div>
+    </form>
+    <p><a href="{% url 'register-user' %}"><h4 class="text-center">Create Account?</h4></a></p>
+</div>
+{% endblock content %}
